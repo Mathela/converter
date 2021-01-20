@@ -38,7 +38,15 @@ public class ConverterService {
     public Double mileToKm(@PathVariable Double distance
     ){
         Double newDistance=0.00;
-        newDistance = newDistance * 1.61 ;
+        newDistance = newDistance * 1.60934 ;
+        return newDistance;
+    } 
+    
+     @GetMapping(path = "/mtok/{distance}", produces = "application/xml")
+    public Double kmToMiles(@PathVariable Double distance
+    ){
+        Double newDistance=0.00;
+        newDistance = newDistance / 1.60934 ;
         return newDistance;
     } 
 }
