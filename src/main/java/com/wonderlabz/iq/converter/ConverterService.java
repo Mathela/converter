@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  *
  * @author Nkosinathi Mathela
+ * 20 Jan 2021
  */
 @RestController
 @RequestMapping("/conversions")
@@ -42,7 +43,7 @@ public class ConverterService {
         return newDistance;
     } 
     
-     @GetMapping(path = "/mtok/{distance}", produces = "application/xml")
+     @GetMapping(path = "/ktom/{distance}", produces = "application/xml")
     public Double kmToMiles(@PathVariable Double distance
     ){
         Double newDistance=0.00;
